@@ -210,7 +210,7 @@ async def mentionalladmin(event):
 # tek tek etiketleme modülü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def tektag(event):
-  global etiket_tagger
+  global gece_tag
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
@@ -241,7 +241,7 @@ async def tektag(event):
                       ]
                     )
                   ) 
-    etiket_tagger.append(event.chat_id)
+    anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):

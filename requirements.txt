@@ -16,5 +16,4 @@ heroku3
 motor
 pymongo
 tgcrypto
-
 aiofiles

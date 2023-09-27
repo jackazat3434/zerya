@@ -1,3 +1,5 @@
+#Edited By @goktuResmi @KlasChannel 
+
 import os, logging, asyncio
 from telethon import Button
 from telethon import TelegramClient, events

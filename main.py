@@ -325,8 +325,8 @@ async def cancel(event):
 
 
 tokat_mesaj = (
-"{}, {}'a Domates Fırlattı! Suratı kıp kırmızı oldu 😁", 
-"{}, {}'ın Saçını Çekti!", 
+"{first_name}, {first_name}'a Domates Fırlattı! Suratı kıp kırmızı oldu 😁", 
+"{first_name}, {first_name}'ın Saçını Çekti!", 
 "{}, {}'a Yumruk attı ! Buz koy morarmasın 🤕", 
 "{}, {}'a Kafa Attı! Burnu kırıldı sanırım 😱", 
 "{}, {}'a Uçan Tekme Attı! Jetli misin mübarek 👀", 

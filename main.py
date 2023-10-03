@@ -487,8 +487,8 @@ async def mentionall(event):
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Etiket işlemi başarıyla tamamlandı.**\n\n**👥 Etiket Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Etiket İşlemini Başlatan:** {rxyzdev_initT}")
 
 
-    global anlik_calisan
-  anlik_calisan.remove(event.chat_id)
+    global gece_tag
+  gece_tag.remove(event.chat_id)
 
   sender = await event.get_sender()
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      

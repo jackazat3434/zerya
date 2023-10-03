@@ -405,7 +405,7 @@ async def etag(event):
     await client.send_message(event.chat_id, "✅ 𝖴𝗒𝖾 𝖾𝗍𝗂𝗄𝖾𝗍𝗅𝖾𝗆𝖾 𝗂𝗌𝗅𝖾𝗆𝗂 𝖻𝖺𝗌𝗅𝖺𝖽𝗂 . . .",
                     buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/{support}')
+                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/KlasSupport')
                       ]
                     )
                   ) 
@@ -418,7 +418,7 @@ async def etag(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**", buttons=(
                       [
-                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/{support}')
+                       Button.url('📝  𝖪𝖺𝗇𝖺𝗅  📝', f'https://t.me/KlasSupport')
                       ]
                     )
                   )

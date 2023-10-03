@@ -409,13 +409,7 @@ async def etag(event):
                       ]
                     )
                   ) 
-      return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"**📢 {msg}\n\n{usrtxt}**")
-        await asyncio.sleep(3)
-        usrnum = 0
-        usrtxt = ""
-    
+    gece_tag.append(event.chat_id)  
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):

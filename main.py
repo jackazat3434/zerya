@@ -378,7 +378,7 @@ emoji = " ❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 🙂 🙃 😉 😌 �
 
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
 async def etag(event):
-  global etiket_tagger
+  global gece_tag
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
@@ -409,7 +409,7 @@ async def etag(event):
                       ]
                     )
                   ) 
-    etiket_tagger.append(event.chat_id)
+    
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):

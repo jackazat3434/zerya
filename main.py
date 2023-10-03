@@ -325,23 +325,23 @@ async def cancel(event):
 
 
 tokat_mesaj = (
-"@{}, @{}'a Domates Fırlattı! Suratı kıp kırmızı oldu 😁", 
-"@{}, @{}'ın Saçını Çekti!", 
-"@{}, @{}'a Yumruk attı ! Buz koy morarmasın 🤕", 
-"@{}, @{}'a Kafa Attı! Burnu kırıldı sanırım 😱", 
-"@{}, @{}'a Uçan Tekme Attı! Jetli misin mübarek 👀", 
-"@{}, @{}'a Kanepeyi Fırlattı! Öyle ölmez füze atsaydın 😱", 
-"@{}, @{}'a İğne sapladı! Bu acıtmıştır sanırım 🥲", 
-"@{}, @{}'a Yumurta Fırlattı! Tam isabet 🎯", 
-"@{}, @{}'a Omuz attı! Ne bakıyon birader", 
-"@{}, @{}'a Çelme taktı!", 
-"@{}, @{}'a Damacana Fırlattı! Damacanaya bişey olmamıştır umarım 👀", 
-"@{}, @{}'ın Üstüne Çay Döktü! Yanıyorsun Fuat Abii 🔥", 
-"@{}, @{}'ın Kafasında Şişe Kırdı! Acımış olmalı 🥲",
-"@{}, @{}'ın Yüzüne Tükürdü! İşte bunu yapmayacaktın 🤬", 
-"@{}, @{}'a Taş Attı! Aha kafası yarıldı 🤭", 
-"@{}, @{}'a Osmanlı Tokatı Attı! Resmen şamar oğlana çevirdi 😱", 
-"@{}, @{}'a Kavanoz Fırlattı! Başka bişey bulamadı sanırım 🙄" 
+"{}, {}'a Domates Fırlattı! Suratı kıp kırmızı oldu 😁", 
+"{}, {}'ın Saçını Çekti!", 
+"{}, {}'a Yumruk attı ! Buz koy morarmasın 🤕", 
+"{}, {}'a Kafa Attı! Burnu kırıldı sanırım 😱", 
+"{}, {}'a Uçan Tekme Attı! Jetli misin mübarek 👀", 
+"{}, {}'a Kanepeyi Fırlattı! Öyle ölmez füze atsaydın 😱", 
+"{}, {}'a İğne sapladı! Bu acıtmıştır sanırım 🥲", 
+"{}, {}'a Yumurta Fırlattı! Tam isabet 🎯", 
+"{}, {}'a Omuz attı! Ne bakıyon birader", 
+"{}, {}'a Çelme taktı!", 
+"{}, {}'a Damacana Fırlattı! Damacanaya bişey olmamıştır umarım 👀", 
+"{}, {}'ın Üstüne Çay Döktü! Yanıyorsun Fuat Abii 🔥", 
+"{}, {}'ın Kafasında Şişe Kırdı! Acımış olmalı 🥲",
+"{}, {}'ın Yüzüne Tükürdü! İşte bunu yapmayacaktın 🤬", 
+"{}, {}'a Taş Attı! Aha kafası yarıldı 🤭", 
+"{}, {}'a Osmanlı Tokatı Attı! Resmen şamar oğlana çevirdi 😱", 
+"{}, {}'a Kavanoz Fırlattı! Başka bişey bulamadı sanırım 🙄" 
 ) 
 
 
@@ -357,8 +357,8 @@ async def tokatla(event):
   yiyen_mesaj = await mesaj.get_reply_message()
   yiyen = yiyen_mesaj.sender
 
-  vuran = f"{atan.first_name}"
-  atilan = f"{yiyen.first_name}"
+  vuran = f"{atan.mention}"
+  atilan = f"{yiyen.mention}"
 
   memom = random.choice(tokat_mesaj)
   await event.reply(memom.format(vuran, atilan))

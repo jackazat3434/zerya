@@ -419,7 +419,7 @@ soz = (
 
 @client.on(events.NewMessage(pattern="^/soztag ?(.*)"))
 async def mentionall(event):
-  global gece_tag
+  global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
     return await event.respond("Bu komutu sadece grup veya kanallarda kullanabilirsiniz.")
@@ -466,7 +466,7 @@ async def mentionall(event):
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Etiket işlemi başarıyla tamamlandı.**\n\n**👥 Etiket Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Etiket İşlemini Başlatan:** {rxyzdev_initT}")
   
   if mode == "text_on_reply":
-    gece_tag.append(event.chat_id)
+    anlik_calisan.append(event.chat_id)
  
     usrnum = 0
     usrtxt = ""
@@ -487,8 +487,8 @@ async def mentionall(event):
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Etiket işlemi başarıyla tamamlandı.**\n\n**👥 Etiket Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Etiket İşlemini Başlatan:** {rxyzdev_initT}")
 
 
-    global gece_tag
-  gece_tag.remove(event.chat_id)
+    global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
 
   sender = await event.get_sender()
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      

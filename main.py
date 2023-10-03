@@ -357,8 +357,8 @@ async def tokatla(event):
   yiyen_mesaj = await mesaj.get_reply_message()
   yiyen = yiyen_mesaj.sender
 
-  vuran = f"{atan.mention}"
-  atilan = f"{yiyen.mention}"
+  vuran = f"{atan.name}"
+  atilan = f"{yiyen.name}"
 
   memom = random.choice(tokat_mesaj)
   await event.reply(memom.format(vuran, atilan))

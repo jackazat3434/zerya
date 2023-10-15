@@ -209,6 +209,7 @@ async def mentionalladmin(event):
 #########################
 
 # tek tek etiketleme modülü
+
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def tektag(event):
   global gece_tag
@@ -228,27 +229,27 @@ async def tektag(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**➻ ᴇsᴋɪ ᴍᴇsᴀᴊʟᴀʀɪ ɢᴏʀᴇᴍɪʏᴏʀᴜᴍ! **")
+        return await event.respond("**ᴇsᴋɪ ᴍᴇsᴀᴊʟᴀʀ ɪᴄɪɴ ᴜʏᴇʟᴇʀᴅᴇɴ ʙᴀʜsᴇᴅᴇᴍᴇᴍ! (ɢʀᴜʙᴀ ᴇᴋʟᴇᴍᴇᴅᴇɴ ᴏɴᴄᴇ ɢᴏɴᴅᴇʀɪʟᴇɴ ᴍᴇsᴀᴊʟᴀʀ.)**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**➻ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ᴍᴇsᴀᴊɪ ʏᴀᴢᴍᴀᴅɪɴ ! **")
+    return await event.respond("**ʙᴀɴᴀ ʙɪʀ ᴍᴇᴛɪɴ ᴠᴇʀ!**")
   else:
-    return await event.respond("**➻ ᴇᴛɪᴋᴇᴛ ɪsʟᴇᴍɪɴᴇ ʙᴀsʟᴀᴍᴀᴍ ɪᴄɪɴ ʙɪʀ sᴇʙᴇᴘ ʏᴀᴢɪɴ ! **")
+    return await event.respond("**💬 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**\n**ᴠᴇʏᴀ** /tag ⬅️ **ᴛɪᴋʟᴀʏɪɴ**")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "🎉 ᴜʏᴇ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛɪʟᴅɪ . . .",
+    await client.send_message(event.chat_id, "☘️ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsʟᴀᴅɪ.\n⏱️ ᴍᴇsᴀᴊ ᴀʀᴀʟɪɢɪ - 2 sᴀɴɪʏᴇ",
                     buttons=(
                       [
-                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{support}')
+                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ. 🫧', f'https://t.me/{support}')
                       ]
                     )
-                  ) 
-    anlik_calisan.append(event.chat_id)
+                  )     
+    gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f" [{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in etiket_tagger:
+      if event.chat_id not in gece_tag:
         await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**",
                     buttons=(
                       [

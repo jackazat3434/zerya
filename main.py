@@ -1134,10 +1134,10 @@ async def ship(c:Client, m:Message):
     iki = users_l[randint(0,count)]
     
     if ilk.id==1550788256 or ilk.id==5576614947 or iki.id==5375589992 or iki.id==5576614947:
-        await m.reply(f"**🎉 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n[ ✍🏻 ](tg://user?id=5053767281) ❤️ [ . ](tg://user?id=5533927130)**")
+        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n[ ✍🏻 ](tg://user?id=5053767281) 💞 [ . ](tg://user?id=5533927130)**")
         
     else:
-        await m.reply(f"**🎉 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} ❣️ {iki.mention}\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`**")
+        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} 💞 {iki.mention}\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`**")
 
 
 ################### VERİTABANI VERİ GİRİŞ ÇIKIŞI #########################
@@ -1286,7 +1286,7 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
     failed = 0
     success = 0
     broadcast_ids[broadcast_id] = dict(total=total_users, current=done, failed=failed, success=success)
-    async with aiofiles.open("broadcast-logs-g4rip.txt", "w") as broadcast_log_file:
+    async with aiofiles.open("broadcast-logs-goktug.txt", "w") as broadcast_log_file:
         async for user in all_users:
             sts, msg = await send_msg(user_id=int(user["id"]), message=broadcast_msg)
             if msg is not None:

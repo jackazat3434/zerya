@@ -429,18 +429,17 @@ async def handler(event):
 
 
 # Başlanğıc Button
-@client.on(events.NewMessage(pattern="^/help$"))
-async def start(event):
-  if event.is_private:
+@client.on(events.callbackquery.CallbackQuery(data="start"))
+async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
-     ad = f"**👋🏻 ᴍᴇʀʜᴀʙᴀ**"
-     await event.reply(f"{ad} {startmesaj}", buttons=(
-                      [Button.url('🎉 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🫧', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                      Button.url("❄️ ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
-                      ],[
-                      Button.url('🇹🇷 ᴏᴡɴᴇʀ', f'https://t.me/{sahib}')
-                      ]
+                       Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
+                      ],
+                      [Button.url('➕ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ', f'https://t.me/{USERNAME}?startgroup=a')],
+                      [Button.url('🏷️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 

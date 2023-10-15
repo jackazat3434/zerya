@@ -179,7 +179,7 @@ async def mentionalladmin(event):
                     link_preview=False)
   
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
-      usrngece_tag.append(event.chat_id)
+    gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):

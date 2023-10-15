@@ -1311,8 +1311,8 @@ async def main_broadcast_handler(m, db): # Ana Broadcast Mantığı
     if failed == 0:
         await m.reply_text(text=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
     else:
-        await m.reply_document(document="broadcast-logs-g4rip.txt", caption=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
-    os.remove("broadcast-logs-g4rip.txt")
+        await m.reply_document(document="broadcast-logs-goktug.txt", caption=LAN.BROADCAST_STOPPED.format(completed_in, total_users, done, success, failed), quote=True,)
+    os.remove("broadcast-logs-goktug.txt")
 
 
 

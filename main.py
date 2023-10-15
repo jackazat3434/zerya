@@ -42,12 +42,12 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("APP_ID","20284546"))
 api_hash = os.environ.get("API_HASH","8d649e2ae1b14571156443721f41cd6a")
-bot_token = os.environ.get("TOKEN","6135179584:AAEs03kmSyCEKhEA_6eq5v_iCL8bcmKrrr8") # Botunuzun Tokenini Girin.
+bot_token = os.environ.get("TOKEN","6045415105:AAEdirHUa9BYX-_8X0nh115Gh311tN2PRfY") # Botunuzun Tokenini Girin.
 sahib = os.environ.get("sahib", "goktuResmi") # Sahiplik Hesabin Kullanıcı Adını Girin .
 komutlar = os.environ.get("komutlar")
-BOT_ID = int(os.environ.get("BOT_ID", "6135179584")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
+BOT_ID = int(os.environ.get("BOT_ID", "6045415105")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
 DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://Monster:158016mstf@cluster0.hmtuifc.mongodb.net/Monster?retryWrites=true&w=majority") # MongoDB veritabanınızın url'si.
-BOT_USERNAME = os.environ.get("BOT_USERNAME","goktugetiketbot") # Botunuzun kullanıcı adı.
+BOT_USERNAME = os.environ.get("BOT_USERNAME","yenitaggersrxbot") # Botunuzun kullanıcı adı.
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001974334924")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
 GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "etikettaggerssupport") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", False) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.

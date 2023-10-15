@@ -384,6 +384,9 @@ async def start(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"**👋🏻 Merhaba**"
      await event.reply(f"{ad} {startmesaj}", buttons=(
+                      [
+                       Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
+                      ],
                       [Button.url('🎉 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🫧', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                       [
                       Button.url("❄️ ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
@@ -396,6 +399,9 @@ async def start(event):
 
   if event.is_group:
     return await client.send_message(event.chat_id, f"👋🏻 **ᴍᴇʀʜᴀʙᴀ**{startmesaj}", buttons=( 
+                                                    [
+                                                     Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
+                                                    ],
                                                     [Button.url('🎉 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🫧', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                                                     [
                                                     Button.url("❄️ ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
@@ -404,6 +410,22 @@ async def start(event):
                                                     ]
                                                   ),
                                                   link_preview=False)
+
+
+# gece kusu
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
+    await event.edit(f"{komutlar}", buttons=(
+                      [
+                      Button.inline("◀️ Geri", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+
+
+
+
+
 
 # Başlanğıc Button
 @client.on(events.NewMessage(pattern="^/help$"))

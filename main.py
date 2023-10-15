@@ -1042,7 +1042,7 @@ async def tokatla(event):
 async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
-     ad = f"{first_name}"
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")

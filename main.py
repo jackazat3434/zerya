@@ -212,7 +212,7 @@ async def mentionalladmin(event):
 
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def tektag(event):
-  global gece_tag
+  global anlik_calisan
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
@@ -243,13 +243,13 @@ async def tektag(event):
                       ]
                     )
                   )     
-    gece_tag.append(event.chat_id)
+    anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f" [{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in anlik_calisan:
         await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**",
                     buttons=(
                       [
@@ -279,7 +279,7 @@ async def tektag(event):
 #etiket işlemini iptal
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
-  global gece_tag
+  global anlik_calisan
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -289,8 +289,8 @@ async def cancel(event):
   if not event.sender_id in admins:
     return await event.respond(f"{noadmin}")
 
-  global gece_tag
-  gece_tag.remove(event.chat_id)
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
 
   sender = await event.get_sender()
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      
@@ -305,7 +305,7 @@ async def cancel(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
-  global gece_tag
+  global anlik_calisan
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -315,8 +315,8 @@ async def cancel(event):
   if not event.sender_id in admins:
     return await event.respond(f"{noadmin}")
 
-  global gece_tag
-  gece_tag.remove(event.chat_id)
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
 
   sender = await event.get_sender()
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      

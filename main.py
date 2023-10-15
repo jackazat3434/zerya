@@ -272,7 +272,7 @@ async def tektag(event):
 #etiket işlemini iptal
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
-  global anlik_calisan
+  global gece_tag
   if event.is_private:
     return await event.respond(f"{nogroup}")
   
@@ -282,8 +282,8 @@ async def cancel(event):
   if not event.sender_id in admins:
     return await event.respond(f"{noadmin}")
 
-  global anlik_calisan
-  anlik_calisan.remove(event.chat_id)
+  global gece_tag
+  gece_tag.remove(event.chat_id)
 
   sender = await event.get_sender()
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      

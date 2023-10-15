@@ -253,7 +253,7 @@ async def tektag(event):
         await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**",
                     buttons=(
                       [
-                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{support}')
+                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     )
                   )

@@ -437,7 +437,7 @@ async def handler(event):
                       [
                        Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
                       ],
-                      [Button.url('➕ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ', f'https://t.me/{USERNAME}?startgroup=a')],
+                      [Button.url('➕ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                       [Button.url('🏷️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ', f'https://t.me/{support}')],
                        [Button.url('👨🏻‍💻 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ', f'https://t.me/{sahib}')]
                     ),

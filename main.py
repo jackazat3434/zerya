@@ -144,15 +144,16 @@ async def tag(event):
 #################
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionalladmin(event):
-  global anlik_calisan
+  global gece_tag
+  rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**• ᴋᴏᴍᴜᴛʟᴀʀ sᴀᴅᴇᴄᴇ ɢʀᴜᴘʟᴀʀᴅᴀ ᴋᴜʟʟᴀɴɪʟᴀʙɪʟɪʀ .**")
+    return await event.respond(f"{nogroup}")
   
   admins = []
-  async for admin in client.iter_participants(event.chat_id):
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**• ᴜᴢğᴜɴᴜᴍ ᴀᴍᴀ ʏᴏɴᴇᴛɪᴄɪ ᴅᴇɢɪʟsɪɴɪᴢ .**")
+    return await event.respond(f"{noadmin}")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -161,34 +162,32 @@ async def mentionalladmin(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**ᴇsᴋɪ ᴍᴇsᴀᴊʟᴀʀ ɪᴄɪɴ ᴜʏᴇʟᴇʀᴅᴇɴ ʙᴀʜsᴇᴅᴇᴍᴇᴍ! (ɢʀᴜʙᴀ ᴇᴋʟᴇᴍᴇᴅᴇɴ ᴏɴᴄᴇ ɢᴏɴᴅᴇʀɪʟᴇɴ ᴍᴇsᴀᴊʟᴀʀ)**")
+        return await event.respond("__ᴇꜱᴋɪ ᴍᴇꜱᴀᴊʟᴀʀɪ ɢᴏʀᴇᴍɪʏᴏʀᴜᴍ!__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**ʙᴀɴᴀ ʙɪʀ ᴍᴇᴛɪɴ ᴠᴇʀ!**")
+    return await event.respond("__ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ᴍᴇꜱᴀᴊɪ ʏᴀᴢᴍᴀᴅɪɴ!__")
   else:
-    return await event.respond("**💬 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**\n**ᴠᴇʏᴀ** /atag ⬅️ **ᴛɪᴋʟᴀʏɪɴ**")
+    return await event.respond(f"{nomesaj}\n**veya** /utag ⬅️ **ᴛɪᴋʟᴀʏɪɴ**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond("**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
                       Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
-  
-    async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
     gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id})  "
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
       if event.chat_id not in gece_tag:
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
@@ -196,12 +195,14 @@ async def mentionalladmin(event):
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
                       Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
+
+
 
 
 #########################

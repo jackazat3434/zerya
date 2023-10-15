@@ -239,7 +239,7 @@ async def tektag(event):
     await client.send_message(event.chat_id, "☘️ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsʟᴀᴅɪ.\n⏱️ ᴍᴇsᴀᴊ ᴀʀᴀʟɪɢɪ - 2 sᴀɴɪʏᴇ",
                     buttons=(
                       [
-                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ. 🫧', f'https://t.me/{support}')
+                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ. 🫧', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     )
                   )     

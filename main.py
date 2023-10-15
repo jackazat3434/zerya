@@ -259,10 +259,19 @@ async def tektag(event):
                   )
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt} \n {msg}")
-        await asyncio.sleep(2)
+        await client.send_message(event.chat_id, f"**📢 {msg}\n\n{usrtxt}**")
+        await asyncio.sleep(3)
         usrnum = 0
         usrtxt = ""
+
+    sender = await event.get_sender()
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .**", buttons=(
+                      [
+                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      ]
+                    ),
+                    link_preview=False)
 
 
 ###################

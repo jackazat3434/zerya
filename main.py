@@ -179,31 +179,29 @@ async def mentionalladmin(event):
                     link_preview=False)
   
     async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
+      usrngece_tag.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
-      if event.chat_id not in anlik_calisan:
-        await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**", buttons=(
-                      [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
-                      ]
-                    ),
-                    link_preview=False)
+      if event.chat_id not in gece_tag:
         return
-      if usrnum == 5:
-        await client.send_message(event.chat_id, f"**📢 {msg}\n\n{usrtxt}**")
-        await asyncio.sleep(3)
+      if usrnum == 8:
+        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-
+     
     sender = await event.get_sender()
-    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .**", buttons=(
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
-
 
 
 #########################
@@ -247,32 +245,25 @@ async def tektag(event):
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
+      rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
-      usrtxt += f" [{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .**",
-                    buttons=(
-                      [
-                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
-                      ]
-                    )
-                  )
         return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"**📢 {msg}\n\n{usrtxt}**")
-        await asyncio.sleep(3)
+      if usrnum == 8:
+        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-
+     
     sender = await event.get_sender()
-    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .**", buttons=(
+    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
-
 
 ###################
 

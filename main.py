@@ -210,9 +210,10 @@ async def mentionalladmin(event):
 
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def tektag(event):
-  global anlik_calisan
+  global gece_tag
+  rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"{nogroup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -227,20 +228,22 @@ async def tektag(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**ᴇsᴋɪ ᴍᴇsᴀᴊʟᴀʀ ɪᴄɪɴ ᴜʏᴇʟᴇʀᴅᴇɴ ʙᴀʜsᴇᴅᴇᴍᴇᴍ! (ɢʀᴜʙᴀ ᴇᴋʟᴇᴍᴇᴅᴇɴ ᴏɴᴄᴇ ɢᴏɴᴅᴇʀɪʟᴇɴ ᴍᴇsᴀᴊʟᴀʀ.)**")
+        return await event.respond("__ᴇꜱᴋɪ ᴍᴇꜱᴀᴊʟᴀʀɪ ɢᴏʀᴇᴍɪʏᴏʀᴜᴍ!__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**ʙᴀɴᴀ ʙɪʀ ᴍᴇᴛɪɴ ᴠᴇʀ!**")
+    return await event.respond("__ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ᴍᴇꜱᴀᴊɪ ʏᴀᴢᴍᴀᴅɪɴ!__")
   else:
-    return await event.respond("**💬 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**\n**ᴠᴇʏᴀ** /tag ⬅️ **ᴛɪᴋʟᴀʏɪɴ**")
-    
+    return await event.respond(f"{nomesaj}\n**veya** /utag ⬅️ **ᴛɪᴋʟᴀʏɪɴ**")
+  
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "☘️ ᴛᴇᴋ ᴛᴇᴋ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsʟᴀᴅɪ.\n⏱️ ᴍᴇsᴀᴊ ᴀʀᴀʟɪɢɪ - 2 sᴀɴɪʏᴇ",
-                    buttons=(
+    anlik_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                       Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ. 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
                       ]
-                    )
-                  )     
+                    ),
+                    link_preview=False)
     gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
@@ -264,7 +267,6 @@ async def tektag(event):
                       ]
                     ),
                     link_preview=False)
-
 ###################
 
 #etiket işlemini iptal

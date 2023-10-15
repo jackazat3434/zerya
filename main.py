@@ -250,7 +250,7 @@ async def tektag(event):
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
       if event.chat_id not in anlik_calisan:
         return
-      if usrnum == 8:
+      if usrnum == 1:
         await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0

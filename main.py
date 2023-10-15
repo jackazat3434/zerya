@@ -42,13 +42,13 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("APP_ID","20284546"))
 api_hash = os.environ.get("API_HASH","8d649e2ae1b14571156443721f41cd6a")
-bot_token = os.environ.get("TOKEN","6045415105:AAEdirHUa9BYX-_8X0nh115Gh311tN2PRfY") # Botunuzun Tokenini Girin.
+bot_token = os.environ.get("TOKEN","6369574095:AAHSJsP61iWUF5J2fkMPW8v2kvj91LsSsdk") # Botunuzun Tokenini Girin.
 sahib = os.environ.get("sahib", "goktuResmi") # Sahiplik Hesabin Kullanıcı Adını Girin .
 komutlar = os.environ.get("komutlar")
-BOT_ID = int(os.environ.get("BOT_ID", "6045415105")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
+BOT_ID = int(os.environ.get("BOT_ID", "6369574095")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
 DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://Monster:158016mstf@cluster0.hmtuifc.mongodb.net/Monster?retryWrites=true&w=majority") # MongoDB veritabanınızın url'si.
-BOT_USERNAME = os.environ.get("BOT_USERNAME","yenitaggersrxbot") # Botunuzun kullanıcı adı.
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001974334924")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
+BOT_USERNAME = os.environ.get("BOT_USERNAME","etikettagbot") # Botunuzun kullanıcı adı.
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001977281514")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
 GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "etikettaggerssupport") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", False) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
 OWNER_ID = int(os.environ.get("OWNER_ID","6695730144")) # Sahip hesabın id'si
@@ -74,10 +74,10 @@ etiketuye = []
 
 # ~~~~~~~~~~~~~~~~~~~~~~~ gece ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-startmesaj = "\n\n**🎉 ʙᴀᴢɪ ᴋᴜʟʟᴀɴɪsʟɪ ᴏᴢᴇʟʟɪᴋʟᴇʀᴇ sᴀʜɪᴘ ᴛᴇʟᴇɢʀᴀᴍ ᴜʏᴇ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ʙᴏᴛᴜʏᴜᴍ. . . \n\n🫧 ᴋᴏᴍᴜᴛʟᴀʀ ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪɴ ᴠᴇ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴏɢʀᴇɴɪɴ . . .**" 
-noadmin = "**➻ 🎉 ᴜᴢɢᴜɴᴜᴍ ᴀᴍᴀ ʏᴏɴᴇᴛɪᴄɪ ᴅᴇɢɪʟsɪɴɪᴢ .**"
-nogroup = "**➻ 🎉 ᴋᴏᴍᴜᴛʟᴀʀ sᴀᴅᴇᴄᴇ ɢʀᴜᴘʟᴀʀᴅᴀ ᴋᴜʟʟᴀɴɪʟᴀʙɪʟɪʀ .**"
-nomesaj = "**➻ 🎉 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**"
+startmesaj = "**ᴍᴇʀʜᴀʙᴀ 👋** __ᴇᴛɪᴋᴇᴛ ᴛᴀɢ ʙᴏᴛᴜɴᴀ ʜᴏs ɢᴇʟᴅɪɴ , ʙɪʀʙɪʀɪɴᴅᴇɴ ғᴀʀᴋʟɪ ᴇᴛɪᴋᴇᴛ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴠᴇ ʙɪʀʙɪʀɪɴᴅᴇɴ ᴇɢʟᴇɴᴄᴇʟɪ ᴍᴏᴅᴜʟʟᴇʀ ɪʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ʙᴏᴛᴜʏᴜᴍ. . . 🌜\n🤖 Kᴏᴍᴜᴛʟᴀʀɪᴍɪ ɢᴏʀᴍᴇᴋ ɪᴄɪɴ ᴀʟᴛᴛᴀᴋɪ "ᴋᴏᴍᴜᴛʟᴀʀ" ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪɴ . . . 🌜__**" 
+noadmin = "**➻ 🌜 ᴜᴢɢᴜɴᴜᴍ ᴀᴍᴀ ʏᴏɴᴇᴛɪᴄɪ ᴅᴇɢɪʟsɪɴɪᴢ .**"
+nogroup = "**➻ 🌜 ᴋᴏᴍᴜᴛʟᴀʀ sᴀᴅᴇᴄᴇ ɢʀᴜᴘʟᴀʀᴅᴀ ᴋᴜʟʟᴀɴɪʟᴀʙɪʟɪʀ .**"
+nomesaj = "**➻ 💬 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**"
 
 #######################
 
@@ -111,9 +111,9 @@ async def tag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -127,16 +127,16 @@ async def tag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -171,9 +171,9 @@ async def mentionalladmin(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond("**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond("**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -189,7 +189,7 @@ async def mentionalladmin(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -198,7 +198,7 @@ async def mentionalladmin(event):
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
     if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -238,9 +238,9 @@ async def tektag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -254,16 +254,16 @@ async def tektag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -353,9 +353,9 @@ async def ctag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -369,16 +369,16 @@ async def ctag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -480,9 +480,9 @@ async def ctag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -496,16 +496,16 @@ async def ctag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -559,9 +559,9 @@ async def rtag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -575,16 +575,16 @@ async def rtag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -723,9 +723,9 @@ async def btag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -739,16 +739,16 @@ async def btag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 2:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -789,7 +789,7 @@ async def cancel(event):
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      
   if event.chat_id in rxyzdev_tagTot:await event.respond(f"**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪᴘᴛᴀʟ ᴇᴅᴇɴ : {rxyzdev_stopT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -815,7 +815,7 @@ async def cancel(event):
   rxyzdev_stopT = f"[{sender.first_name}](tg://user?id={sender.id})"      
   if event.chat_id in rxyzdev_tagTot:await event.respond(f"**⛔ ɪsʟᴇᴍ ɪᴘᴛᴀʟ ᴇᴅɪʟᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪᴘᴛᴀʟ ᴇᴅᴇɴ : {rxyzdev_stopT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -868,9 +868,9 @@ async def etag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -884,16 +884,16 @@ async def etag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 3:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -941,9 +941,9 @@ async def itag(event):
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
-    await event.respond(f"**🎉 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
+    await event.respond(f"**🌜 ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ɪsʟᴇᴍɪ ʙᴀsᴀʀɪʏʟᴀ ʙᴀsʟᴀᴛɪʟᴅɪ .**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -957,16 +957,16 @@ async def itag(event):
       if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")
+        await client.send_message(event.chat_id, f"**➻ {msg}\n{usrtxt}**")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
      
     sender = await event.get_sender()
     rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"      
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🎉 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
+    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**🌜 ɪsʟᴇᴍ ᴛᴀᴍᴀᴍʟᴀɴᴅɪ .\n\n👤 ᴇᴛɪᴋᴇᴛʟᴇʀɪɴ sᴀʏɪsɪ : {rxyzdev_tagTot[event.chat_id]}\n🗣 ɪsʟᴇᴍɪ ʙᴀsʟᴀᴛᴀɴ : {rxyzdev_initT}**", buttons=(
                       [
-                      Button.url('🎉 ʀᴇsᴍɪ ᴋᴀɴᴀʟ 🫧', f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url('🌜 ʀᴇsᴍɪ ᴋᴀɴᴀʟ ', f'https://t.me/{GROUP_SUPPORT}')
                       ]
                     ),
                     link_preview=False)
@@ -1046,26 +1046,26 @@ async def start(event):
                       [
                        Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
                       ],
-                      [Button.url('🎉 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🫧', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
+                      [Button.url('➕ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                       [
-                      Button.url("❄️ ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
+                      Button.url("🏷️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ", f'https://t.me/{GROUP_SUPPORT}')
                       ],[
-                      Button.url('🇹🇷 ᴏᴡɴᴇʀ', f'https://t.me/{sahib}')
+                      Button.url('👨🏻‍💻 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ', f'https://t.me/{sahib}')
                       ]
                     ),
                     link_preview=False)
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"👋🏻 **ᴍᴇʀʜᴀʙᴀ**{startmesaj}", buttons=( 
+    return await client.send_message(event.chat_id, f"{startmesaj}", buttons=( 
                                                     [
                                                      Button.inline("💫 ᴋᴏᴍᴜᴛʟᴀʀ", data="help")
                                                     ],
-                                                    [Button.url('🎉 ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ 🫧', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
+                                                    [Button.url('➕ ʙᴇɴɪ ɢʀᴜʙᴀ ᴇᴋʟᴇ', f'https://t.me/{BOT_USERNAME}?startgroup=a')],
                                                     [
-                                                    Button.url("❄️ ᴋᴏᴍᴜᴛʟᴀʀ", f'https://t.me/{GROUP_SUPPORT}')
+                                                    Button.url("🏷️ ʀᴇsᴍɪ ᴋᴀɴᴀʟ", f'https://t.me/{GROUP_SUPPORT}')
                                                     ],[
-                                                    Button.url('🇹🇷 ᴏᴡɴᴇʀ', f'https://t.me/{sahib}')
+                                                    Button.url('👨🏻‍💻 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ', f'https://t.me/{sahib}')
                                                     ]
                                                   ),
                                                   link_preview=False)

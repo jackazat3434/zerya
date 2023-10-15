@@ -241,14 +241,14 @@ async def tektag(event):
                       ]
                     )
                   )     
-    anlik_calisan.append(event.chat_id)
+    gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       rxyzdev_tagTot[event.chat_id] += 1
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) , "
-      if event.chat_id not in anlik_calisan:
+      if event.chat_id not in gece_tag:
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"**➻ {msg}\n\n{usrtxt}**")

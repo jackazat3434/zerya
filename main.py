@@ -469,7 +469,7 @@ cumle = (
 "Bir zombi kıyametinde ne kadar hayatta kalabileceğin düşünüyorsun?😱",
 "Özellikle güzel kokmamasına rağmen koklamak istemeye devam ettiğin şey ne?🤪",
 "En çok hangi ünlüyle hayat değiştirmek istersiniz?😒",
-"Gördüğünüz en kötü veya en tuhaf rüya neydi?😪,
+"Gördüğünüz en kötü veya en tuhaf rüya neydi?😪",
 "Zaman yolculuğunu nereye yapmak istersiniz: geçmişe mi yoksa geleceğe mi?🤔",
 "Kıyı asla geri sallamadığı için denizin tuzlu olduğunu düşünüyor musunuz?🤨",
 "Ölüm listenizdeki ilk kişi kimdir?🙄",

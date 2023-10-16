@@ -1214,35 +1214,6 @@ async def ship(c:Client, m:Message):
 
 
 
-#İD
-
-@app.on_message(filters.command("id"))
-async def _id(_, message: Message):
-    msg = message.reply_to_message or message
-    out_str = "**Kullanıcı Bilgileri:**\n"
-    out_str += f" ⚡️ Grup ID : `{(msg.forward_from_chat or msg.chat).id}`\n"
-    out_str += f" 💎 Yanıtlanan Kullanıcı Adı : {msg.from_user.first_name}\n"
-    out_str += f" 💬 Mesaj ID : `{msg.forward_from_message_id or msg.message_id}`\n"
-    if msg.from_user:
-        out_str += f" 🙋🏻‍♂️ Yanıtlanan Kullanıcı ID : `{msg.from_user.id}`\n"
- 
-    await message.reply(out_str)
-
-
-#İNFO
-
-@app.on_message(filters.command("info"))
-async def _id(_, message: Message):
-    msg = message.reply_to_message or message
-    out_str = "**Kullanıcı Bilgileri:**\n"
-    out_str += f" ⚡️ Grup ID : `{(msg.forward_from_chat or msg.chat).id}`\n"
-    out_str += f" 💎 Yanıtlanan Kullanıcı Adı : {msg.from_user.first_name}\n"
-    out_str += f" 💬 Mesaj ID : `{msg.forward_from_message_id or msg.message_id}`\n"
-    if msg.from_user:
-        out_str += f" 🙋🏻‍♂️ Yanıtlanan Kullanıcı ID : `{msg.from_user.id}`\n"
- 
-    await message.reply(out_str)
-
 
 
 

@@ -445,7 +445,46 @@ cumle = (
 "Sence bir kişinin bir arkadaşlık uygulamasında biyografisine koyabileceği en kötü şey ne?🤮",
 "Köpek bulunan eve melek girmezmiş. Azrail de bir melek. Evimizi köpeklerle doldurursak ölümsüz olmaz mıyız?🫣",    
 "Su altındayken bir balonu şişirmenin mümkün olduğuna inanıyor musunuz?🤓",
-    
+"Kurgusal bir karakter olabilseydin, kim olurdun?😎",
+"Hangi Disney prensesi en iyi casusluk yapabilir?🙀", 
+"En gereksiz kelime nedir?😒", 
+"Hangisini tercih edersiniz: Burnunuz yok ama gerçekten güzel kokan parmaklarınız mı var? Ya da kör ol ama gerçekten güzel bir gülüşün var mı?😵",
+"Bir yıl 365 gün 6 saat sürüyor ise neden her yıl yılbaşını gece 12’de kutluyoruz?🎅🏻",
+"Vücudunun hangi bölümüne ekleme yapmak isterdin?🙂",
+"Köpeğimin adını “Hoşt” koyarsam çağırdığım zaman ne yapar?🐶",
+"Eğer uçağın karakutusu kaza anında parçalanmıyorsa neden bütün uçak o maddeden yapılmıyor?✈️",
+"Dünya döndüğü halde neden bir helikopter havada sabit durduğunda aynı yerde olur?🚁",
+"Bir zombi kıyametinde seçeceğiniz silah ne olurdu?🔫",
+"Tüp bebek daha mı az yakar?😵‍💫",
+"İngilizcede butterfly kelebek anlamına geliyor. “Butter” tereyağı demek, “fly” da uçmak anlamında, o zaman kelebekler uçantereyağları mıdır?😂",
+"Süpermen ve Batman arasındaki bir kavgada kim kazanır?🥵",
+"En büyük parti hayvanı hangisidir?😺",
+"Dünya dönüyorsa neden zıpladığımız zaman aynı yere düşüyoruz?🙃",
+"Yüzmek zayıflatıyorsa balinaların yağsız, tığ gibi olması gerekmez miydi?👀",
+"Hayvanlar konuşabilseydi, en kaba olan hangisi olurdu?😃",
+"Ressam olsaydın ilk gün neyi boyardın?👨🏻‍🎨",
+"Uhu iyi bir yapıştırıcıysa içinde bulunduğu tüpün içini neden yapıştıramıyor?🙊",
+"Mağara adamlarının mağara kadınları hakkında kabus gördüğünü düşünüyor musunuz?🫨",
+"Özellikle güzel kokmamasına rağmen koklamak istemeye devam ettiğin şey ne?🤪",
+"Bir zombi kıyametinde ne kadar hayatta kalabileceğin düşünüyorsun?😱",
+"Özellikle güzel kokmamasına rağmen koklamak istemeye devam ettiğin şey ne?🤪",
+"En çok hangi ünlüyle hayat değiştirmek istersiniz?😒",
+"Gördüğünüz en kötü veya en tuhaf rüya neydi?😪,
+"Zaman yolculuğunu nereye yapmak istersiniz: geçmişe mi yoksa geleceğe mi?🤔",
+"Kıyı asla geri sallamadığı için denizin tuzlu olduğunu düşünüyor musunuz?🤨",
+"Ölüm listenizdeki ilk kişi kimdir?🙄",
+"Gerçekten sarhoş olduktan sonra yaptığınız en çılgınca şey nedir?😅",
+"Bir keresinde bir yemek için ödeme yapmayı planlarken cüzdanınızı getirmeyi unuttunuz mu?😯",
+"İdam cezasına çarptırıldıysan son yemeğin ne olacağını düşünüyorsun?🤷🏻‍♂️",
+"Sence bir kişinin bir arkadaşlık uygulamasında biyografisine koyabileceği en kötü şey ne?🤮",
+"Köpek bulunan eve melek girmezmiş. Azrail de bir melek. Evimizi köpeklerle doldurursak ölümsüz olmaz mıyız?🫣",
+"Korku filmlerinden korkuyor musunuz?😱",
+"Vampir ile kurt evlenirse çocukları kumpir mi olur?🤭",
+"Başkalarına bildirmek için hangi gizli komployu yapmak istersin?🥶",
+"Eğer bugün hava sıcaklığı 0 derece ise ve yarın iki kat daha soğuk olacaksa, yarın hava yine 0 derece olmaz mı?😁",
+"Köpeklerin konuşabilseydi imajını tamamen mahvedecek bir şey söyleyebilir mi?🤕",
+"Neden sa yazarken as yazılıyoda hi yazılırken ih yazılmıyor?😶‍🌫",
+"İnekler ot yiyip süt üretiyorsa sütün hammaddesi ot mudur?🫤",   
 "Uçakta uçmaktan korkuyor musunuz? 😁"
 )
 
@@ -1036,6 +1075,40 @@ async def tokatla(event):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+#Bot kontrol
+#@goktuResmi Tarafından eklenmiştir.
+
+@client.on(events.NewMessage(pattern='^/botcum'))
+async def event(ups):
+  if ups.sender_id == 6695730144:
+   await ups.reply("**Göktuğ Abi Şuan Çalışmaktayım 🇹🇷🤍**")
+  elif ups.sender_id == 6695730144:
+    await ups.reply("**Seni ne kadar seviyorum bilsen tamam tamam uzatmıyorum. Aktifim !**")
+  elif ups.sender_id == 5979903647:
+    await ups.reply("** Sayın Berf hanım Şuan Çalışmaktayım 🇹🇷🤍**")
+  elif ups.sender_id == 6604549799:
+    await ups.reply("__Poyrazcım Şuan Çalışıyorum Merak Etme🥺👉👈__")
+  else:
+    await ups.reply("**Sen benim sahibim değilsin! **")
+
+
+
+
+
+
+
+
   
 # Başlanğıc Mesajı
 @client.on(events.NewMessage(pattern="^/start$"))
@@ -1138,6 +1211,40 @@ async def ship(c:Client, m:Message):
         
     else:
         await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention}  💞  {iki.mention}\n\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`**")
+
+
+
+#İD
+
+@app.on_message(filters.command("id"))
+async def _id(_, message: Message):
+    msg = message.reply_to_message or message
+    out_str = "**Kullanıcı Bilgileri:**\n"
+    out_str += f" ⚡️ Grup ID : `{(msg.forward_from_chat or msg.chat).id}`\n"
+    out_str += f" 💎 Yanıtlanan Kullanıcı Adı : {msg.from_user.first_name}\n"
+    out_str += f" 💬 Mesaj ID : `{msg.forward_from_message_id or msg.message_id}`\n"
+    if msg.from_user:
+        out_str += f" 🙋🏻‍♂️ Yanıtlanan Kullanıcı ID : `{msg.from_user.id}`\n"
+ 
+    await message.reply(out_str)
+
+
+#İNFO
+
+@app.on_message(filters.command("info"))
+async def _id(_, message: Message):
+    msg = message.reply_to_message or message
+    out_str = "**Kullanıcı Bilgileri:**\n"
+    out_str += f" ⚡️ Grup ID : `{(msg.forward_from_chat or msg.chat).id}`\n"
+    out_str += f" 💎 Yanıtlanan Kullanıcı Adı : {msg.from_user.first_name}\n"
+    out_str += f" 💬 Mesaj ID : `{msg.forward_from_message_id or msg.message_id}`\n"
+    if msg.from_user:
+        out_str += f" 🙋🏻‍♂️ Yanıtlanan Kullanıcı ID : `{msg.from_user.id}`\n"
+ 
+    await message.reply(out_str)
+
+
+
 
 
 ################### VERİTABANI VERİ GİRİŞ ÇIKIŞI #########################

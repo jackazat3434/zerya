@@ -1091,8 +1091,8 @@ async def tokatla(event):
 
 @client.on(events.NewMessage(pattern='^/botcum'))
 async def event(ups):
-  if ups.sender_id == 6695730144:
-   await ups.reply("**Göktuğ Abi Şuan Çalışmaktayım 🇹🇷🤍**")
+  if ups.sender_id == 6596508612:
+   await ups.reply("**Sedat Abi Şuan Çalışmaktayım 🤍**")
   elif ups.sender_id == 6695730144:
     await ups.reply("**Seni ne kadar seviyorum bilsen tamam tamam uzatmıyorum. Aktifim !**")
   elif ups.sender_id == 5979903647:

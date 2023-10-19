@@ -1099,6 +1099,8 @@ async def event(ups):
     await ups.reply("**Kral çalışıyorum☠️**")
   elif ups.sender_id == 5979903647:
     await ups.reply("** Sayın Berf hanım Şuan Çalışmaktayım 🇹🇷🤍**")
+  elif ups.sender_id == 6405495618:
+    await ups.reply("** Sayın Seher hanım Şuan Çalışmaktayım 🇹🇷🤍**")
   elif ups.sender_id == 6604549799:
     await ups.reply("__Poyrazcım Şuan Çalışıyorum Merak Etme🥺👉👈__")
   elif ups.sender_id == 6303442651:

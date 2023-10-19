@@ -1102,7 +1102,7 @@ async def event(ups):
   elif ups.sender_id == 6604549799:
     await ups.reply("__Poyrazcım Şuan Çalışıyorum Merak Etme🥺👉👈__")
   elif ups.sender_id == 6303442651:
-    await ups.reply("__En Sevdiğim Yengem Şuan Çalışmaktayım👉👈🌹🌺__")
+    await ups.reply("__Sahibimin Hatunu Çalışıyorum Seni Çok Seviyoruz👉👈🌹🌺__")
   else:
     await ups.reply("**Sen benim sahibim değilsin! **")
 

@@ -1196,14 +1196,31 @@ async def hg(bot: Client, msg: Message):
 
 
 # Eros oku
-  kalp = ( ❤️
-           💕
-           💞
-           💗
-           
-   
-          
-
+  kalp = ( "❤️"
+           "💕"
+           "💞"
+           "💗"
+           "🖤"
+           "💜"
+           "💙"
+           "💖"
+           "🧡"
+           "💗"
+           "💓"
+           "💚"
+           "💝"
+           "💘"
+           "🤎"
+           "🩷"
+           "🤍"
+           "🩶"
+           "🫶"
+           "💟"
+           "🫀"
+           "🩵"
+           "❤️‍🔥"
+           "❤️‍🩹"
+    
 @app.on_message(filters.command(["eros"],["/", ""]) & ~filters.private & ~filters.channel)
 async def ship(c:Client, m:Message):
     users = await c.get_chat_members(m.chat.id, limit=200)

@@ -42,7 +42,7 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("APP_ID","26177237"))
 api_hash = os.environ.get("API_HASH","6929515a9de7f855c81d4e64f6f3a4e9")
-bot_token = os.environ.get("TOKEN","6323354353:AAGrgV8-_14fy-bwpxQaF0_fXWKpPQJuU-s") # Botunuzun Tokenini Girin.
+bot_token = os.environ.get("TOKEN","6323354353:AAG-tOPS_VL6lvrOrjaOzSJGqFtK3ojuV0U") # Botunuzun Tokenini Girin.
 sahib = os.environ.get("sahib", "J3llack") # Sahiplik Hesabin Kullanıcı Adını Girin .
 komutlar = os.environ.get("komutlar")
 BOT_ID = int(os.environ.get("BOT_ID", "6323354353")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .

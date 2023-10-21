@@ -1196,7 +1196,7 @@ async def hg(bot: Client, msg: Message):
 
 
 
-  kalp = (
+  galp = (
   "❤️",
   "💕",
   "💞",

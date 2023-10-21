@@ -1196,6 +1196,13 @@ async def hg(bot: Client, msg: Message):
 
 
 # Eros oku
+  kalp = ( ❤️
+           💕
+           💞
+           💗
+           
+   
+          
 
 @app.on_message(filters.command(["eros"],["/", ""]) & ~filters.private & ~filters.channel)
 async def ship(c:Client, m:Message):

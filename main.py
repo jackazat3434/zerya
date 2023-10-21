@@ -1224,7 +1224,6 @@ galp = (
 )
 
 
-
 # Eros oku
 
     
@@ -1247,7 +1246,7 @@ async def ship(c:Client, m:Message):
         await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n[ ✍🏻 ](tg://user?id=5053767281) 💞 [ . ](tg://user?id=5533927130)**")
         
     else:
-        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} {random.choice(kalp)} {iki.mention}**\n\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`")
+        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} {random.choice(galp)} {iki.mention}**\n\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`")
 
 
 

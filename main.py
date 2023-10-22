@@ -40,18 +40,18 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-api_id = int(os.environ.get("APP_ID","26177237"))
-api_hash = os.environ.get("API_HASH","6929515a9de7f855c81d4e64f6f3a4e9")
-bot_token = os.environ.get("TOKEN","6323354353:AAG-tOPS_VL6lvrOrjaOzSJGqFtK3ojuV0U") # Botunuzun Tokenini Girin.
-sahib = os.environ.get("sahib", "J3llack") # Sahiplik Hesabin Kullanıcı Adını Girin .
+api_id = int(os.environ.get("APP_ID",""))
+api_hash = os.environ.get("API_HASH","")
+bot_token = os.environ.get("TOKEN","") # Botunuzun Tokenini Girin.
+sahib = os.environ.get("sahib", "") # Sahiplik Hesabin Kullanıcı Adını Girin .
 komutlar = os.environ.get("komutlar")
-BOT_ID = int(os.environ.get("BOT_ID", "6323354353")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
-DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://kurdbeats:41213458@cluster0.j9z8lt4.mongodb.net/?retryWrites=true&w=majority") # MongoDB veritabanınızın url'si.
-BOT_USERNAME = os.environ.get("BOT_USERNAME","ElitTaggerbot") # Botunuzun kullanıcı adı.
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1001603322166")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
-GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "ElitTaggerDuyuru") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
+BOT_ID = int(os.environ.get("BOT_ID", "")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
+DATABASE_URL = os.environ.get("DATABASE_URL","") # MongoDB veritabanınızın url'si.
+BOT_USERNAME = os.environ.get("BOT_USERNAME","") # Botunuzun kullanıcı adı.
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
+GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", False) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
-OWNER_ID = int(os.environ.get("OWNER_ID","6596508612")) # Sahip hesabın id'si
+OWNER_ID = int(os.environ.get("OWNER_ID","")) # Sahip hesabın id'si
 LANGAUGE = os.environ.get("LANGAUGE", "TR")
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
@@ -1196,33 +1196,6 @@ async def hg(bot: Client, msg: Message):
 
 
 
-galp = (
-"🤍",
-"🤎",
-"♥️",
-"❣️",
-"❤️",
-"💕",
-"💖",
-"💗",
-"💘",
-"💙",
-"💚",
-"💛",
-"💜",
-"💝",
-"💞",
-"💟",
-"🖤",
-"🩷",
-"🩶",
-"🩵",
-"🧡",
-"❤️‍🔥"
-
-
-)
-
 
 # Eros oku
 
@@ -1246,7 +1219,7 @@ async def ship(c:Client, m:Message):
         await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n[ ✍🏻 ](tg://user?id=5053767281) 💞 [ . ](tg://user?id=5533927130)**")
         
     else:
-        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} {random.choice(galp)} {iki.mention}**\n\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`")
+        await m.reply(f"**💘 ᴇʀᴏs'ᴜɴ ᴏᴋᴜ ᴀᴛɪʟᴅɪ.\n• ᴀsɪᴋʟᴀʀ  :\n\n{ilk.mention} 💞 {iki.mention}**\n\n`ᴜʏᴜᴍʟᴜʟᴜᴋ ᴏʀᴀɴɪ: %{random.randint(0, 100)}`")
 
 
 

@@ -40,18 +40,18 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-api_id = int(os.environ.get("APP_ID",""))
-api_hash = os.environ.get("API_HASH","")
-bot_token = os.environ.get("TOKEN","") # Botunuzun Tokenini Girin.
-sahib = os.environ.get("sahib", "") # Sahiplik Hesabin Kullanıcı Adını Girin .
+api_id = int(os.environ.get("APP_ID","24334674"))
+api_hash = os.environ.get("API_HASH","e5825bf45db65a9e92321e4b7c89d6e2")
+bot_token = os.environ.get("TOKEN","8281409661:AAGP4eKnpfE-hqaKwvWQNfvQUSQq9Si02MA") # Botunuzun Tokenini Girin.
+sahib = os.environ.get("sahib", "@HZ_Ciwan") # Sahiplik Hesabin Kullanıcı Adını Girin .
 komutlar = os.environ.get("komutlar")
-BOT_ID = int(os.environ.get("BOT_ID", "")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
-DATABASE_URL = os.environ.get("DATABASE_URL","") # MongoDB veritabanınızın url'si.
-BOT_USERNAME = os.environ.get("BOT_USERNAME","") # Botunuzun kullanıcı adı.
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
+BOT_ID = int(os.environ.get("BOT_ID", "8281409661")) # Botunuzun İd'si ( Tokenin Başındaki Rakamları ) Girin .
+DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://jackazat7_db_user:nPWGPMJ7anaJvOpm@cluster0.nvqy0jk.mongodb.net/") # MongoDB veritabanınızın url'si.
+BOT_USERNAME = os.environ.get("BOT_USERNAME","@ZeryaEtiket_bot") # Botunuzun kullanıcı adı.
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1002980527937")) # Botunuzun eylemleri kaydedeceği kayıt grubunun id'si.
 GROUP_SUPPORT = os.environ.get("GROUP_SUPPORT", "") # Botunuzdan yasaklanan kullanıcıların itiraz işlemleri için başvuracağı grup, kanal veya kullanıcı. Boş bırakırsanız otomatik olarak OWNER_ID kimliğine yönlendirecektir.
 GONDERME_TURU = os.environ.get("GONDERME_TURU", False) # Botunuzun yanıtladığınız mesajı gönderme türü. Eğer direkt iletmek isterseniz False, kopyasını göndermek isterseniz True olarak ayarlayın.
-OWNER_ID = int(os.environ.get("OWNER_ID","")) # Sahip hesabın id'si
+OWNER_ID = int(os.environ.get("OWNER_ID","8458889924")) # Sahip hesabın id'si
 LANGAUGE = os.environ.get("LANGAUGE", "TR")
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
@@ -74,7 +74,7 @@ etiketuye = []
 
 # ~~~~~~~~~~~~~~~~~~~~~~~ gece ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-startmesaj = "**ᴍᴇʀʜᴀʙᴀ 👋** __ᴇʟɪᴛ ᴛᴀɢɢᴇʀ ʙᴏᴛᴜɴᴀ ʜᴏs ɢᴇʟᴅɪɴ ,\n\nʙɪʀʙɪʀɪɴᴅᴇɴ ғᴀʀᴋʟɪ ᴇᴛɪᴋᴇᴛ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴠᴇ ʙɪʀʙɪʀɪɴᴅᴇɴ ᴇɢʟᴇɴᴄᴇʟɪ ᴍᴏᴅᴜʟʟᴇʀ ɪʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ʙᴏᴛᴜʏᴜᴍ. 😶‍🌫️\n\n🤖 Kᴏᴍᴜᴛʟᴀʀɪᴍɪ ɢᴏʀᴍᴇᴋ ɪᴄɪɴ ᴀʟᴛᴛᴀᴋɪ `ᴋᴏᴍᴜᴛʟᴀʀ` ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪɴ. 😶‍🌫️__" 
+startmesaj = "**ᴍᴇʀʜᴀʙᴀ 👋** __Zerya ᴛᴀɢɢᴇʀ ʙᴏᴛᴜɴᴀ ʜᴏs ɢᴇʟᴅɪɴ ,\n\nʙɪʀʙɪʀɪɴᴅᴇɴ ғᴀʀᴋʟɪ ᴇᴛɪᴋᴇᴛ ᴋᴏᴍᴜᴛʟᴀʀɪ ᴠᴇ ʙɪʀʙɪʀɪɴᴅᴇɴ ᴇɢʟᴇɴᴄᴇʟɪ ᴍᴏᴅᴜʟʟᴇʀ ɪʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴇᴛɪᴋᴇᴛʟᴇᴍᴇ ʙᴏᴛᴜʏᴜᴍ. 😶‍🌫️\n\n🤖 Kᴏᴍᴜᴛʟᴀʀɪᴍɪ ɢᴏʀᴍᴇᴋ ɪᴄɪɴ ᴀʟᴛᴛᴀᴋɪ `ᴋᴏᴍᴜᴛʟᴀʀ` ʙᴜᴛᴏɴᴜɴᴀ ᴛɪᴋʟᴀʏɪɴ. 😶‍🌫️__" 
 noadmin = "**➻ 😶‍🌫️ ᴜᴢɢᴜɴᴜᴍ ᴀᴍᴀ ʏᴏɴᴇᴛɪᴄɪ ᴅᴇɢɪʟsɪɴɪᴢ .**"
 nogroup = "**➻ 😶‍🌫️ ᴋᴏᴍᴜᴛʟᴀʀ sᴀᴅᴇᴄᴇ ɢʀᴜᴘʟᴀʀᴅᴀ ᴋᴜʟʟᴀɴɪʟᴀʙɪʟɪʀ .**"
 nomesaj = "**➻ 👻 ʙᴀɴᴀ ʙɪʀ ᴍᴇsᴀᴊ ᴠᴇʀɪɴ .**"
@@ -666,7 +666,6 @@ bayrak = (
 "🇽🇰",
 "🇼🇸",
 "🇼🇫",
-"🏴󠁧󠁢󠁷󠁬󠁳󠁿",
 "🇻🇺",
 "🇻🇳",
 "🇻🇮",
@@ -708,7 +707,6 @@ bayrak = (
 "🇸🇬",
 "🇸🇪",
 "🇸🇩",
-"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
 "🇸🇦",
 "🇷🇼",
 "🇷🇺",
@@ -1091,20 +1089,12 @@ async def tokatla(event):
 
 @client.on(events.NewMessage(pattern='^/botcum'))
 async def event(ups):
-  if ups.sender_id == 6596508612:
-   await ups.reply("**Sedat Abi Şuan Çalışmaktayım 🤍**")
-  elif ups.sender_id == 6695730144:
-    await ups.reply("**Seni ne kadar seviyorum bilsen tamam tamam uzatmıyorum. Aktifim !**")
-  elif ups.sender_id == 1541261546:
+  if ups.sender_id == 7734946625:
+   await ups.reply("**Ayhan Abi Şuan Çalışmaktayım 🤍**")
+  elif ups.sender_id == 8458889924:
     await ups.reply("**Kral çalışıyorum☠️**")
-  elif ups.sender_id == 5979903647:
-    await ups.reply("** Sayın Berf hanım Şuan Çalışmaktayım 🇹🇷🤍**")
-  elif ups.sender_id == 6405495618:
-    await ups.reply("** Sayın Seher hanım Şuan Çalışmaktayım 🇹🇷🤍**")
-  elif ups.sender_id == 6604549799:
-    await ups.reply("__Poyrazcım Şuan Çalışıyorum Merak Etme🥺👉👈__")
-  elif ups.sender_id == 6303442651:
-    await ups.reply("__Sahibimin Hatunu Çalışıyorum Seni Çok Seviyoruz👉👈🌹🌺__")
+  elif ups.sender_id == 7863118621:
+    await ups.reply("** Sayın Gözde hanım Şuan Çalışmaktayım 🇹🇷🤍**")
   else:
     await ups.reply("**Sen benim sahibim değilsin! **")
 
